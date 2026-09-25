@@ -1,0 +1,78 @@
+/* File 12 Deliverable: styles/three-dashboard.css */
+/* Styles for Phase 7 Three.js Interactive 3D Digital Twin Bench */
+
+.three-dashboard-container {
+  position: relative;
+  width: 100%;
+  height: 720px;
+  background: #020617; /* Dark slate 950 */
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+.three-canvas-viewport {
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+  outline: none;
+}
+
+.three-canvas-viewport:active {
+  cursor: grabbing;
+}
+
+/* Tooltip & Floating Telemetry Labels */
+.three-tooltip-card {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 20;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(45, 212, 191, 0.4);
+  backdrop-filter: blur(12px);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #f8fafc;
+  font-size: 0.75rem;
+  max-width: 20rem;
+  pointer-events: none;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
+
+.three-tooltip-header {
+  color: #2dd4bf;
+  font-family: monospace;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Control Panel Sidebar Responsive Layout */
+@media (max-width: 1024px) {
+  .three-dashboard-container {
+    height: auto;
+    min-height: 800px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .three-canvas-viewport {
+    min-height: 480px;
+  }
+}
+
+/* WebGL Fallback Overlay */
+.three-webgl-fallback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  background: #0f172a;
+  color: #94a3b8;
+  text-align: center;
+  border-radius: 1rem;
+}

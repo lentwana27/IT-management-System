@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Deep obsidian/slate-gray palette with supreme readability and clean contrast */
+  --color-slate-50: #f8fafc;
+  --color-slate-100: #f1f5f9;
+  --color-slate-200: #e2e8f0;
+  --color-slate-300: #cbd5e1;
+  --color-slate-400: #94a3b8;
+  --color-slate-500: #64748b;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1e293b;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #07090e;
+
+  /* Elevate standard text sizes slightly across the entire application for legibility */
+  --font-size-xs: 0.85rem;     /* upgraded from 0.75rem (12px) to 13.6px */
+  --font-size-sm: 0.95rem;     /* upgraded from 0.875rem (14px) to 15.2px */
+  --font-size-base: 1.05rem;   /* upgraded from 1rem (16px) to 16.8px */
+  --font-size-lg: 1.25rem;     /* upgraded from 1.125rem (18px) to 20px */
+  --font-size-xl: 1.4rem;      /* upgraded from 1.25rem (20px) to 22.4px */
+  --font-size-2xl: 1.75rem;    /* upgraded from 1.5rem (24px) to 28px */
+}
+
+/* Base style resets to guarantee a premium, high-contrast, clear layout */
+body {
+  background-color: var(--color-slate-950);
+  color: var(--color-slate-100);
+  font-size: 15.5px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure any custom tiny font size specs in Tailwind elements are upgraded for supreme legibility */
+[class*="text-[10px]"] {
+  font-size: 11.5px !important;
+  font-weight: 500 !important;
+}
+
+[class*="text-[11px]"] {
+  font-size: 12.5px !important;
+  font-weight: 500 !important;
+}
+
+[class*="text-xs"] {
+  font-size: 13.5px !important;
+}
+
+[class*="text-sm"] {
+  font-size: 15px !important;
+}
